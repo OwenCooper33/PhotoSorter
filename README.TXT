@@ -6,8 +6,8 @@ them into folders based on their predicted labels using the
 MobileNetV2 model.
 
 Features
-Drag-and-drop interface for image classification.
-Uses MobileNetV2, a pre-trained deep learning model, to classify images.
-Automatically organizes images into labeled folders.
-Provides an image preview and displays the classification label.
-Allows customization of the output directory.
+- Drag-and-drop interface for image classification.
+- Uses MobileNetV2, a pre-trained deep learning model, to classify images.
+- Automatically organizes images into labeled folders.
+- Provides an image preview and displays the classification label.
+- Allows customization of the output directory.
