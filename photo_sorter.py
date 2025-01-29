@@ -44,7 +44,6 @@ def update_image_preview(image_path, label):
     image_label.image = img_tk
     label_var.set(f"Classified as: {label}")
 
-# Function to set output directory
 def set_output_directory():
     global output_dir
     output_dir = filedialog.askdirectory()
@@ -60,14 +59,14 @@ output_dir = os.path.expanduser("~/Desktop/SortedImages")
 
 tk.Label(root, text="Drag and Drop Images Below:", font=("Arial", 14)).pack(pady=10)
 
-drop_frame = tk.Frame(root, width=300, height=200, bg="lightgray", relief="sunken")
+drop_frame = tk.Frame(root, width=300, height=200, bg="lightblue", relief="sunken")
 drop_frame.pack(pady=10)
 drop_frame.pack_propagate(False)
 
 root.drop_target_register(DND_FILES)
 root.dnd_bind("<<Drop>>", handle_drop)
 
-image_label = tk.Label(drop_frame, bg="lightgray")
+image_label = tk.Label(drop_frame, bg="lightblue")
 image_label.pack(expand=True)
 
 label_var = tk.StringVar(value="No image classified yet.")
