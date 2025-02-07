@@ -16,6 +16,7 @@ def classify_image(image_path):
     img_array = preprocess_input(img_array)
     img_array = img_array[None, ...]
     predictions = model.predict(img_array)
+    #change top 1 to an if-else to check if the folder exist
     decoded = decode_predictions(predictions, top=1)
     label = decoded[0][0][1]
     return label
@@ -50,7 +51,6 @@ def set_output_directory():
     if output_dir:
         output_dir_label.config(text=f"Output Directory: {output_dir}")
 
-# Create the TkinterDnD window
 root = TkinterDnD.Tk()
 root.title("Image Sorter")
 root.geometry("400x500")
